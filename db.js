@@ -7,7 +7,7 @@ function getIngredients(db = connection) {
 }
 
 function addIngredients(add, db = connection) {
-  console.log(add.ingredient)
+  // console.log(add.ingredient)
   return db('ingredients').insert({
     ingredient_name: add.ingredient,
     ingredient_amount: add.quantity,
