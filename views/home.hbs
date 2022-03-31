@@ -1,5 +1,18 @@
+<h3>Here is a list of ingredients and their quantities</h3>
 <ul>
   {{#each ingredients}}
     <li>{{ingredient_name}} x {{ingredient_amount}}</li>
   {{/each}}
 </ul>
+
+<form method="post" action="/ingredients">
+
+  <label for="ingredient">What ingredient would you like to add?</label>
+  <input type="text" name="ingredient">
+  <br>
+  <label for="quantity">How much are you adding?</label>
+  <input type="text" name="quantity">
+  <br>
+  <button type="submit">SUBMIT</button>
+
+</form>
