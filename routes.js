@@ -8,7 +8,14 @@ router.get('/', (req, res) => {
 })
 
 router.get('/ingredients', (req, res) => {
-  res.send('THIS WILL SOON BE A LIST OF INGREDIENTS IN YOUR PANTRY')
+  db.getIngredients()
+    .then((ingredients) => {
+      res.render('home', { ingredients: ingredients })
+      return null
+    })
+    .catch((err) => {
+      res.status(500).send('DATABASE ERROR: ' + err.message)
+    })
 })
 
 module.exports = router
