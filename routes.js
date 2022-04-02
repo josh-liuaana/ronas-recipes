@@ -29,15 +29,8 @@ router.post('/ingredients', (req, res) => {
     })
 })
 
-// router.post('/ingredients', (req, res) => {
-//   console.log(req.body) // => returns {delete: ''}
-//   db.deleteIngredients(req.body)
-//     .then(() => {
-//       res.redirect('ingredients')
-//     })
-//     .catch((err) => {
-//       res.status(500).send('DATABASE ERROR: ' + err.message)
-//     })
-// })
+router.get('/recipes', (req, res) => {
+  res.send('THIS IS WHERE THE RECIPES WILL LIVE')
+})
 
 module.exports = router
