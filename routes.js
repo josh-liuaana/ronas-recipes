@@ -19,8 +19,8 @@ router.get('/ingredients', (req, res) => {
 })
 
 router.post('/ingredients', (req, res) => {
-  // console.log(req.body) => returns {ingredient: '', quantity: ''}
-  db.addIngredients(req.body)
+  console.log(req.body) // => returns {ingredient: '', quantity: ''} / delete: '' if delete button pressed
+  db.addDelFunc(req.body)
     .then(() => {
       res.redirect('ingredients')
     })
@@ -28,5 +28,16 @@ router.post('/ingredients', (req, res) => {
       res.status(500).send('DATABASE ERROR: ' + err.message)
     })
 })
+
+// router.post('/ingredients', (req, res) => {
+//   console.log(req.body) // => returns {delete: ''}
+//   db.deleteIngredients(req.body)
+//     .then(() => {
+//       res.redirect('ingredients')
+//     })
+//     .catch((err) => {
+//       res.status(500).send('DATABASE ERROR: ' + err.message)
+//     })
+// })
 
 module.exports = router
