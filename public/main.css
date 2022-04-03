@@ -2,13 +2,47 @@
 
 * {
   font-family: 'Indie Flower', cursive;
-  background-color: #c7c7c7;
   text-align:center
 }
 
+body {
+  background-color: #c1c1c1;
+  }
+
+/* HOME SCREEN BUTTONS */
+
 .home-buttons {
-  border-radius: 4px;
-  color: black;
-  
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #204fff; 
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 50%;
+  cursor: pointer;
+  transition: all 0.5s;
 }
 
+.home-buttons span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.home-buttons span:after {
+  content: '\203a';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.home-buttons:hover span {
+  padding-right: 25px;
+}
+
+.home-buttons:hover span:after {
+  opacity: 1;
+  right: 0;
+}
