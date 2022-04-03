@@ -5,7 +5,6 @@ exports.up = function (knex) {
     table.integer('ingredient_amount')
   })
 }
-
 exports.down = function (knex) {
   return knex.schema.dropTable('ingredients')
 }
