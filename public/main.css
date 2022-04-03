@@ -9,6 +9,16 @@ body {
   background-color: #c1c1c1;
   }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+
 /* HOME SCREEN BUTTONS */
 
 .home-buttons {
