@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
-body {
+* {
   font-family: 'Indie Flower', cursive;
+  background-color: #c7c7c7;
+  text-align:center
 }
 
-.header {
-  font-family: 'Indie Flower', cursive;
+.home-buttons {
+  border-radius: 4px;
+  color: black;
+  
 }
 

@@ -33,4 +33,8 @@ router.get('/recipes', (req, res) => {
   res.send('THIS IS WHERE THE RECIPES WILL LIVE')
 })
 
+router.get('/shopping_list', (req, res) => {
+  res.send('THIS IS WHERE SHOPPING LIST WILL LIVE')
+})
+
 module.exports = router
